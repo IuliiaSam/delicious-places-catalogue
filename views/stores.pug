@@ -1,0 +1,16 @@
+extends layout
+
+include mixins/_storeCard
+include mixins/_pagination
+
+block content
+    .inner
+        //- h2 You are on page '#{title}'
+        h2= title
+        //- using the mixin:
+        //- pre= h.dump(stores)
+        .stores
+            each store in stores
+                +storeCard(store)
+        +pagination(page, pages, count)
+

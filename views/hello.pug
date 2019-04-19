@@ -1,0 +1,18 @@
+//- //- div.wrapper.wrapperName
+//- .wrapper
+//- 	p.hello Hello! my cat's name is #{name.toUpperCase()}
+//- 	span hey
+//- 	img(src="/images/photos/1.jpg" alt=`Cat ${cat}`)
+
+//- h2 
+//- 	| Hello 
+//- 	em How are you?
+	
+extends layout 
+
+block header
+	p new header
+
+block content
+	p hello
+	h2 Sale ends #{h.moment().endOf('day').fromNow()}
